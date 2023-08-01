@@ -1,0 +1,285 @@
+/* 
+&display=swap
+&subset=cyrillic-ext 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+img {
+    vertical-align: top;
+}
+html,
+body {
+    height: 100%;
+}
+html {
+    font-size: 16px;
+}
+body {
+    line-height: 1;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+/* ------------------------------ */
+.button {
+    margin: 20px auto;
+    max-width: 400px;
+    border: 5px solid #7a956b;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fa9191;
+}
+.button:last-child {
+    max-width: 600px;
+}
+.button:first-child {
+    max-width: 300px;
+}
+.button_text {
+    font-size: 30px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.button1:hover {
+    background-color: #48eb56;
+}
+.button2:active {
+    background-color: #3910ec;
+}
+.link:visited {
+    color: #00ff62;
+}
+.link:focus {
+    color: #5d4cf5;
+}
+.link:hover {
+    color: #ff0000;
+}
+.button3:hover .button_text {
+    color: #ffffff;
+}
+.button5::first-line {
+	font-size: 50px;
+	color: #d9d3f5;
+}
+.button6::first-letter {
+	font-size: 100px;
+	color: #d9d3f5;
+}
+.button6 p{
+	margin: 0px 0px 20px 0px;
+}
+.button6 p:last-child{
+	margin: 0px 0px 0px 0px;
+}
+.button7 p::before {
+	content: '(';
+	display: inline;
+}
+.button7 p::after {
+	content: ')';
+	display: inline;
+}
+.button7 *:not(:last-child) {
+	margin: 0px 0px 20px 0px;
+}
+.button7 p:nth-child(odd) {
+    color: red;
+}
+.button7 p:nth-child(even) {
+    color: green;
+}
+.button8 p:first-child {
+    color: red;
+}
+.button8 p:last-child {
+    color: green;
+}
+.button8 p:nth-child(3) {
+    color: rgb(65, 34, 241);
+}
+.button8 p:nth-child(7) {
+    color: rgb(128, 0, 64);
+}
+
+/*===============================================*/
+
+/*
+Звернення до дочірнього елемента, 
+при стані ("при наведенні") батька 
+.block:hover .link {
+
+:visited 
+Спрацьовує для відвіданих посилань
+Зауваження: Через причини приватності, 
+браузери суворо обмежують стилі, які ви 
+можете застосувати до елемента, використовуючи цей псевдо-клас:
+тільки color, background-color, border-color,
+border-bottom-color, border-left-color, border-right-color,
+border-top-color, outline-color, column-rule-color, 
+fill і stroke. Зауважте також, що альфа-канал буде 
+ігноруватися: буде використовуватися альфа-канал, 
+який використовується для невідвіданих посилань замість нього 
+(але якщо прозорість - 0, то в цьому випадку 
+ігнорується весь колір, і один із використовуваних 
+стилів для невідвідуваних посилань).
+
+:hover
+Спрацьовує при наведенні на елемент, 
+часто застосовується застосовується як для посилань так
+і для будь-якого іншого елемента.
+
+:focus
+Спрацьовує при отриманні елементом фокусу. 
+Часто застосовується до елементів форм. Наприклад інпутів.
+
+:active
+Спрацьовує при натисканні на елемент. 
+В основному застосовується до посилань і кнопок.
+
+!!! :target
+Спрацьовує коли елемент є об'єктом 
+на який посилаються
+*/
+
+/*===============================================*/
+
+/*
+Псевдокласи положення в коді 
+
+:first-child
+Звернення до першого елемента в блоці
+
+.text p:first-child {
+	color: red;
+}
+Перший у блоці тег P, навіть якщо вище 
+нього є інші теги 
+
+.text *:first-child {
+	color: red;
+}
+Будь-який об'єкт, який перший всередині батька 
+
+:last-child
+Звернення до останнього елемента в блоці
+.text p:last-child {
+	color: red;
+}
+
+!!! Останній у блоці тег P, 
+якщо нижче нього нічого немає  
+.text p:last-of-type {
+	color: red;
+}
+
+Прибираємо зайвий відступ. Варіант №1 
+.text *:last-child {
+	margin-bottom: 0;
+}
+
+Прибираємо зайвий відступ. Варіант №2 
+для будь-яких об'єктів всередині об'єктів із класом .text
+додати зовнішній відступ 20px вниз, 
+але крім останнього об'єкта
+.text *:not(:last-child) {
+	margin: 0px 0px 20px 0px;
+}
+
+:nth-child(порядковий номер елемента)
+Звернення до конкретних елементів у блоці
+
+odd - непарні 
+even - парні
+.text p:nth-child(odd) {
+	color: red;
+}
+*/
+
+/*===============================================*/
+
+/*
+Псевдоелемент ::first-line задає стиль першого 
+рядка форматованого тексту. 
+Довжина цього рядка залежить від багатьох факторів, 
+таких як використовуваний шрифт, 
+розмір вікна браузера, ширина блоку, мови тощо. 
+У правилах стилю допустимо 
+використовувати тільки властивості, що стосуються шрифту, 
+зміни кольору тексту і фону.
+
+Псевдоелемент ::first-letter визначає стиль першого
+символу в тексті елемента, 
+до якого додається. 
+До цього псевдоелемента можуть застосовуватися тільки
+стильові властивості, 
+пов'язані з властивостями шрифту, полями, відступами,
+межами, кольором і фоном.
+
+::before, ::after - СТРОЧНІ !!!!
+використання content ОБОВ'ЯЗКОВЕ!
+*/
+
+/*===============================================*/
+
+.choose__container {
+    padding: 24px 24px 60px 24px;
+    margin: 0px auto 20px auto;
+    border-radius: 6px;
+    background: #252525;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    max-width: 255px;
+}
+
+.choose__maintext {
+    color: #fff;
+    font-family: "Helvetica Neue";
+    font-size: 22px;
+    letter-spacing: -0.275px;
+    text-transform: capitalize;
+}
+.choose__maintext::after{
+	content: "";
+	width: 56px;
+	height: 2px;
+	background-color: #14f300;
+	display: inline-block;
+	margin: 10px 0px 26px 0px;
+}
+
+.choose__subtext {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Helvetica Neue";
+    font-size: 13px;
+    line-height: 18px; /* 138.462% */
+    letter-spacing: -0.162px;
+}
