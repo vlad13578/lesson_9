@@ -2,8 +2,7 @@
 &display=swap
 &subset=cyrillic-ext 
 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 
 *,
 *::before,
@@ -88,29 +87,29 @@ body {
     color: #ffffff;
 }
 .button5::first-line {
-	font-size: 50px;
-	color: #d9d3f5;
+    font-size: 50px;
+    color: #d9d3f5;
 }
 .button6::first-letter {
-	font-size: 100px;
-	color: #d9d3f5;
+    font-size: 100px;
+    color: #d9d3f5;
 }
-.button6 p{
-	margin: 0px 0px 20px 0px;
+.button6 p {
+    margin: 0px 0px 20px 0px;
 }
-.button6 p:last-child{
-	margin: 0px 0px 0px 0px;
+.button6 p:last-child {
+    margin: 0px 0px 0px 0px;
 }
 .button7 p::before {
-	content: '(';
-	display: inline;
+    content: "(";
+    display: inline;
 }
 .button7 p::after {
-	content: ')';
-	display: inline;
+    content: ")";
+    display: inline;
 }
 .button7 *:not(:last-child) {
-	margin: 0px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
 }
 .button7 p:nth-child(odd) {
     color: red;
@@ -267,13 +266,13 @@ even - парні
     letter-spacing: -0.275px;
     text-transform: capitalize;
 }
-.choose__maintext::after{
-	content: "";
-	width: 56px;
-	height: 2px;
-	background-color: #14f300;
-	display: inline-block;
-	margin: 10px 0px 26px 0px;
+.choose__maintext::after {
+    content: "";
+    width: 56px;
+    height: 2px;
+    background-color: #14f300;
+    display: inline-block;
+    margin: 10px 0px 26px 0px;
 }
 
 .choose__subtext {
@@ -282,4 +281,87 @@ even - парні
     font-size: 13px;
     line-height: 18px; /* 138.462% */
     letter-spacing: -0.162px;
+}
+
+.promise__container {
+    max-width: 1060px;
+    margin: 0px auto;
+    padding: 20px;
+    background: #ffffff;
+}
+.promise__maintext {
+    color: #5d62b5;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin: 0px 0px 33px 0px;
+}
+.promise__maintext::before {
+    content: "";
+    background: url("../img/OverlineMark.png") 0 50% no-repeat;
+    padding: 0px 36px 0px 0px;
+    width: 17px;
+    height: 16px;
+}
+.promise__subtext {
+    color: #000;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 42px;
+    margin: 0px 0px 68px 0px;
+}
+.promise__bottom {
+}
+.promise__bottomtext {
+    color: #f2726f;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 26px;
+	margin: -66px 0px 20px 86px;
+}
+.promise__li:nth-child(1)::before {
+	content: "";
+	width: 63px;
+	height: 63px;
+	background: url('../img/1.png') 0 0 no-repeat;
+	display: inline-block;
+	margin: 0px 20px 0px 0px;
+}
+.promise__li:nth-child(2)::before {
+	content: "";
+	width: 63px;
+	height: 63px;
+	background: url('../img/2.png') 0 0 no-repeat;
+	display: inline-block;
+	margin: 0px 20px 0px 0px;
+}
+.promise__li:nth-child(3)::before {
+	content: "";
+	width: 63px;
+	height: 63px;
+	background: url('../img/3.png') 0 0 no-repeat;
+	display: inline-block;
+	margin: 0px 20px 0px 0px;
+}
+.promise__bottomsubtext {
+    color: #4b4b4b;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+	margin: 0px 0px 0px 86px;
+	
+}
+.promise__li {
+    display: inline-block;
+    max-width: 324px;
+    margin: 0px 20px 0px 0px;
+}
+.promise__li:last-child {
+    margin: 0px;
 }
